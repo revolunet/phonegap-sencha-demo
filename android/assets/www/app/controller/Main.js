@@ -35,6 +35,8 @@ Ext.define('PhonegapDemo.controller.Main', {
 
     onDeviceReady: function() {
         // get phonegap contacts when ready
+        // save scope for phonegap callback
+        var me = this;
         var fields = ['id', 'displayName', 'photos', 'phoneNumbers', 'emails'];
         navigator.contacts.find(fields, function(contacts) {
             var validContacts = [],
@@ -42,12 +44,12 @@ Ext.define('PhonegapDemo.controller.Main', {
 
             for (var i = 0, l = contacts.length; i < l; i++) {
                 // filter results
-                if (contacts[i].photos.length > 1 && contacts[i].photos[0].value !== '' && contacts[i].displayName && contacts[i].phoneNumbers.length > 0) {
+                if (contacts[i].photos.length > 0 && contacts[i].photos[0].value !== '' && contacts[i].displayName && contacts[i].phoneNumbers.length > 0) {
                     validContacts.push(contacts[i]);
                 }
             }
             store.add(validContacts);
-            this.updateHomeInfo(store.getCount());
+            me.updateHomeInfo(store.getCount());
         }, function() {
             navigator.notification.alert("cannot access phone contacts :/");
         });
@@ -93,7 +95,7 @@ Ext.define('PhonegapDemo.controller.Main', {
             item = home.items.last(),
             mainPanel = this.getMainPanel(),
             listButton = this.getListButton(),
-            html = "<div id='status'>" + count + " contact"+ (count > 1 ? 's' : '') +" found.</div>";
+            html = "<div id='status'>" + count + " contact"+ (count > 1 ? 's' : '') +" found</div>";
 
         item.setHtml(html);
         mainPanel.setMasked(false);

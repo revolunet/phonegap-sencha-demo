@@ -17,6 +17,10 @@ Ext.application({
             xclass: 'PhonegapDemo.view.Main'
         });
 
+        // load phonegap stuff
+        document.addEventListener("deviceready", function () {
+            mainPanel.fireEvent("deviceready");
+        } , true);
     }
 
 });
