@@ -19,7 +19,7 @@ Features inside :
 
 Basic Android dev environnement setup
 ---
- *I don't use eclipse, just ant (see [android cmdline setup][2])*
+ *I don't use eclipse, just ant (see [android cmdline setup][3])*
 
  1- Clone a sample phonegap project
 
