@@ -4,7 +4,7 @@ Phonegap + Sencha demo
 
 This is a sample android project with associated slides for the [2nd Phonegap Paris Meetup][1]
 
-There is a sample [Sencha Touch 2][4] app that loads contacts right from the phone and display them in a ListView and in a Carousel.
+There is a sample [Sencha Touch 2][4] app located in `exampleapp/assets/www` that loads contacts right from the phone and display them in a ListView and in a Carousel.
 
 
 Android dev environnement setup
