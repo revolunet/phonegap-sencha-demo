@@ -8,7 +8,7 @@ Ext.define('PhonegapDemo.controller.Main', {
             contactNav: 'contactnav',
             contactList: 'contactnav list',
             actionButtons: 'contactactions button',
-            listButton: 'mainpanel button[title=List]'
+            listButton: 'mainpanel button[title=Contacts]'
         },
         control: {
             mainPanel: {
@@ -28,18 +28,14 @@ Ext.define('PhonegapDemo.controller.Main', {
     },
 
     launch: function() {
-        console.log('LAUNCH 2');
         var store = Ext.getStore('Contacts'),
             count = store.getCount();
-
         this.updateHomeInfo(count);
     },
 
     onDeviceReady: function() {
-        console.log('onDeviceReady');
+        // get phonegap contacts when ready
         var fields = ['id', 'displayName', 'photos', 'phoneNumbers', 'emails'];
-
-        // get phonegap contacts with 'displayName' fields
         navigator.contacts.find(fields, function(contacts) {
             var validContacts = [],
                 store = Ext.getStore('Contacts');
@@ -51,9 +47,7 @@ Ext.define('PhonegapDemo.controller.Main', {
                 }
             }
             store.add(validContacts);
-            console.log('store load', store.getCount());
             this.updateHomeInfo(store.getCount());
-            // alert(store.getCount()); //todo : display on home
         }, function() {
             navigator.notification.alert("cannot access phone contacts :/");
         });
@@ -86,7 +80,6 @@ Ext.define('PhonegapDemo.controller.Main', {
 
     onListButtonTap: function() {
         var button = this.getListButton();
-
         button.setBadgeText(false);
     },
 

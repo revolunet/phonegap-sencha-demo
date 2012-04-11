@@ -11,9 +11,9 @@ Ext.define('PhonegapDemo.view.Home', {
             xtype: 'toolbar',
             title: 'Phonegap Sencha demo'
         }, {
-            html: "<div id='logo'><img src='logo.jpeg' width='150' height='150'/></div>"
+            html: "<div id='logo'><img src='logo.jpeg' width='120' height='120'/></div>"
         }, {
-            html: "<div id='status'>Retrieving contact informations...</div>"
+            html: "<div id='status'>Retrieving contacts...</div>"
         }]
     }
 });

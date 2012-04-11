@@ -17,14 +17,6 @@ Ext.application({
             xclass: 'PhonegapDemo.view.Main'
         });
 
-        console.warn('LAUNCH', mainPanel);
-
-        // load phonegap stuff
-        // document.addEventListener("deviceready", function () {
-        //     alert(42);
-        //     console.log('phonegap said: deviceready');
-        //     mainPanel.fireEvent("deviceready");
-        // } , true);
     }
 
 });

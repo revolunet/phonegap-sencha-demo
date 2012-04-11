@@ -28,7 +28,7 @@ Ext.define('PhonegapDemo.view.Main', {
         }, {
             xtype: 'contactnav',
             iconCls: 'calendar2',
-            title: 'List'
+            title: 'Contacts'
         }]
     }
 });

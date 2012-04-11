@@ -2,6 +2,7 @@ Ext.define('PhonegapDemo.model.Contact', {
     extend: 'Ext.data.Model',
     config: {
         fields: [
+            // we transform a bit the raw phonegap format
             {name: 'id', type:'int'},
             {name: 'displayName', type:'string'},
             {name: 'phoneNumber', type :'string', convert: function(val, rec) {return rec.raw.phoneNumbers[0] && rec.raw.phoneNumbers[0].value;} },
