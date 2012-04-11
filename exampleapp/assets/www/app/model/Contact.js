@@ -10,4 +10,3 @@ Ext.define('PhonegapDemo.model.Contact', {
         ]
     }
 });
-
