@@ -31,9 +31,16 @@ Ext.application({
     onDeviceReady: function() {
     // get phonegap contacts with 'displayName' fields
     navigator.contacts.find(['id', 'displayName', 'photos', 'phoneNumbers', 'emails'], function(contacts) {
+        var store = Ext.StoreMgr.get('Contacts');
+        var valid_contacts = [];
         for (var i=0, j =contacts.length; i<j; i++) {
-            Ext.StoreMgr.get('Contacts').add(contacts[i]);
+            // filter results
+            if (contacts[i].photos.length > 1 && contacts[i].photos[0].value != '' && contacts[i].displayName && contacts[i].phoneNumbers.length > 0) {
+                valid_contacts.push(contacts[i]);
+            }
         }
+        store.add(valid_contacts);
+        alert(store.getCount()); //todo : display on home
     }, function() {
         navigator.notification.alert("cannot access phone contacts :/");
     });

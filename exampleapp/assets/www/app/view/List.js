@@ -15,8 +15,8 @@
                 xtype:'list',
                 itemTpl:'<img class="photo" src="{photo}" width="60" height="60"/>' +
                 '<b>{displayName}</b><br/>' +
-                '<i>{phoneNumber}</i>' +
-                '<div style="font-size:0.8em;color:darkgrey;">{email}</div>' +
+                '<i>{phoneNumber}</i><br/>' +
+                '<div style="font-size:0.8em;color:darkgrey;">{email}&nbsp;</div>' +
                 '<div style="clear:both;display:none"></div>',
                  store: 'Contacts',
                  listeners:{
