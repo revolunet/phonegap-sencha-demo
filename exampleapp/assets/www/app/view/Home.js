@@ -11,7 +11,7 @@ Ext.define('PhonegapDemo.view.Home', {
             xtype: 'toolbar',
             title: 'Phonegap Sencha demo'
         }, {
-            html: "<div id='logo'><img src='http://www.revolunet.com/static/parisjs8/img/logo-revolunet-carre.jpg' width='150' height='150'/></div>"
+            html: "<div id='logo'><img src='logo.jpeg' width='150' height='150'/></div>"
         }, {
             html: "<div id='status'>Retrieving contact informations...</div>"
         }]

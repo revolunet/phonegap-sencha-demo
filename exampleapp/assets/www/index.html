@@ -5,11 +5,21 @@
         <meta charset='utf-8'>
         <title>Phonegap+Sencha+Android demo</title>
         <link rel="stylesheet" href="style.css" type="text/css">
-        <script type="text/javascript" src="http://dev.sencha.com/deploy/sencha-touch-2-b3/builds/sencha-touch-all-debug.js"></script>
+        <!-- // <script type="text/javascript" src="http://dev.sencha.com/deploy/sencha-touch-2-b3/builds/sencha-touch-all-debug.js"></script> -->
+        <script type="text/javascript" src="sencha-touch.js"></script>
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
 
         <!-- // <script src="http://jsconsole.com/remote.js?revotest"></script> -->
        
+        <script type="text/javascript">
+            function onBodyLoad() {
+                // alert(40);
+                document.addEventListener("deviceready", function() {
+                    alert(41);
+                }, false);
+            }
+        </script>
+
         <style>
             .photo {
                 float:left;
@@ -36,9 +46,11 @@
                 margin-top:40px;
             }
         </style>
+
+
         <script type="text/javascript" src="app.js"></script>
     </head>
 
-    <body></body>
+    <body onload="onBodyLoad()"></body>
 
 </html>
