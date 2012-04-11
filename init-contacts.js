@@ -1,3 +1,9 @@
+//
+// sample contacts creation
+// WARNING: this file should only be used in a emulator, not on your phone
+// you could erase all of your contacts.
+//
+
 var BASE_CONTACTS = [
 	{'displayName': 'Marie Testu', 'phoneNumber':'06 89 34 57 33', 'email': 'mtestu@hotmail.com', 'photoUrl': 'http://m4.licdn.com/mpr/mpr/shrink_100_100/p/4/000/145/015/1a4c5ed.jpg'},
 	{'displayName': 'Philippe Dubert', 'phoneNumber':'06 57 33 89 34', 'email': 'pdubert@gmail.com', 'photoUrl': 'http://media01.linkedin.com/mpr/mpr/shrink_60_60/p/2/000/015/017/174ca01.jpg'},
@@ -16,7 +22,7 @@ var BASE_CONTACTS = [
 ];
 
 function delContacts() {
-	// find all contacts and DELETE thems !
+	// WARNING: find all contacts and DELETE thems !
 	navigator.contacts.find(['displayName'], function(contacts) {
 		// delete all contacts !
 		for (var i=0; i<contacts.length;i++) contacts[i].remove();
@@ -39,5 +45,5 @@ function createContact(contactInfo) {
 function createContacts() {
 	// create initial contact list
 	for (var i=0; i<BASE_CONTACTS.length;i++)  createContact(BASE_CONTACTS[i]);
-		navigator.notification.alert(BASE_CONTACTS.length + " contacts created");
+	navigator.notification.alert(BASE_CONTACTS.length + " contacts created");
 }

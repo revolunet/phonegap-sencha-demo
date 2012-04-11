@@ -2,12 +2,22 @@ Phonegap + Sencha demo
 =====
 
 
-This is a sample android project with associated slides for the [2nd Phonegap Paris Meetup][1]
+This is a sample phonegap 1.6 project with slides for our presentation given at [2nd Phonegap Paris Meetup][1] the 12th April 2012. Proudly brought to you by the [revolunet team][2].
 
-There is a sample [Sencha Touch 2][4] app located in `exampleapp/assets/www` that loads contacts right from the phone and display them in a ListView and in a Carousel.
+We provide a sample [Sencha Touch 2][4] app that loads contacts right from the phone and display them in a ListView and in a Carousel.
+
+There is both an Android and a iOS sample Project.
+
+This is a good start to setup a new phonegap+sencha MVC project.
 
 
-Android dev environnement setup
+Features inside :
+---
+ - sample Phonegap projects for android/ios
+ - sample Sencha Touch 2 MVC application
+ - phonegap loads the contacts from the phone then fills a Sencha data store
+
+Basic Android dev environnement setup
 ---
  *I don't use eclipse, just ant (see [android cmdline setup][2])*
 
@@ -20,8 +30,6 @@ Android dev environnement setup
  4- Enjoy :)
 
 
-
-Proudly brought to you by [revolunet team][2]
 
 
  [1]: http://www.meetup.com/PhoneGap-Paris/
