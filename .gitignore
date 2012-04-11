@@ -1,1 +1,5 @@
 .DS_Store
+android/bin
+android/gen
+android/local.properties
+android/proguard.cfg
