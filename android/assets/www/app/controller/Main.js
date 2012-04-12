@@ -34,6 +34,7 @@ Ext.define('PhonegapDemo.controller.Main', {
     },
 
     onDeviceReady: function() {
+        alert("handler");
         // get phonegap contacts when ready
         // save scope for phonegap callback
         var me = this;
