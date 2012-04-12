@@ -15,7 +15,7 @@
 
 <html>
   <head>
-    <title>Presentation</title>
+    <title>Phonegap+Sencha demo @revolunet</title>
 
     <meta charset='utf-8'>
     <script
@@ -29,8 +29,12 @@
       background: url(img/logolong-100.png) bottom right no-repeat !important;  
       background-color: white !important;  
     } 
-    h2 {
-      
+    h2.normal {
+      position:relative;
+      top:10px;
+    }
+    ul.numbered li {
+      list-style-type: decimal;
     }
     
   </style>
@@ -41,8 +45,6 @@
       
       <!-- Your slides (<article>s) go here. Delete or comment out the
            slides below. -->
-        
-        
       
       <article>
         <h1>Phonegap with Android<br>and Sencha Touch 2</h1>
@@ -53,14 +55,15 @@
       </article>
 
       <article>
-        <h1>Why Phonegap ?</h1><br>
+        <h1>Why Phonegap ?</h1>
+        <br>
         <ul>
           <li>Javascript access to device APIs</li>
           <li>Stores distribution</li>
           <li>Offline apps</li>
+          <li>Massive progress since Adobe acquisition</li>
         </ul>
       </article>
-
 
       <article>
         <h1>Why Android ?</h1><br>
@@ -68,9 +71,9 @@
           <li>> 850 000 activations / day</li>
           <li>rise of the 'internet of things'</li>
           <li>open source + cross platform dev environnement</li>
+          <li>native google services integration</li>
         </ul>
       </article>
-      
 
       <article>
         <h1>Why Sencha Touch ?</h1><br>
@@ -79,319 +82,307 @@
           <li>Awesome docs and API</li>
           <li>Enterprise-grade solution</li>
           <li>Free for commercial usage !</li>
+          <li>WebKit + Phonegap contributors</li>
         </ul>
       </article>
 
       <article>
-        <p>
-          This is a slide with just text. This is a slide with just text.
-          This is a slide with just text. This is a slide with just text.
-          This is a slide with just text. This is a slide with just text.
-        </p>
-        <p>
-          There is more text just underneath.
-        </p>
-      </article>
-
-      <article>
-        <h3>
-          Simple slide with header and text
-        </h3>
-        <p>
-          This is a slide with just text. This is a slide with just text.
-          This is a slide with just text. This is a slide with just text.
-          This is a slide with just text. This is a slide with just text.
-        </p>
-        <p>
-          There is more text just underneath with a <code>code sample: 5px</code>.
-        </p>
-      </article>
-
-      <article class='smaller'>
-        <h3>
-          Simple slide with header and text (small font)
-        </h3>
-        <p>
-          This is a slide with just text. This is a slide with just text.
-          This is a slide with just text. This is a slide with just text.
-          This is a slide with just text. This is a slide with just text.
-        </p>
-        <p>
-          There is more text just underneath with a <code>code sample: 5px</code>.
-        </p>
-      </article>
-
-      <article>
-        <h3>
-          Slide with bullet points and a longer title, just because we
-          can make it longer
-        </h3>
+        <h1>Why Sencha Touch 2 ?</h1><br>
         <ul>
-          <li>
-            Use this template to create your presentation
-          </li>
-          <li>
-            Use the provided color palette, box and arrow graphics, and
-            chart styles
-          </li>
-          <li>
-            Instructions are provided to assist you in using this
-            presentation template effectively
-          </li>
-          <li>
-            At all times strive to maintain Google's corporate look and feel
-          </li>
+          <li>MVC architecture</li>
+          <li>Fully themable with SASS</li>
+          <li>Better Android support</li>
+          <li>Javascript core shared with ExtJS</li>
         </ul>
       </article>
 
       <article>
-        <h3>
-          Slide with bullet points that builds
-        </h3>
-        <ul class="build">
-          <li>
-            This is an example of a list
-          </li>
-          <li>
-            The list items fade in
-          </li>
-          <li>
-            Last one!
-          </li>
-        </ul>
-
-        <div class="build">
-          <p>Any element with child nodes can build.</p>
-          <p>It doesn't have to be a list.</p>
-        </div>
+        <h1 style='margin-top:0px'>
+          Android fragmentation
+        </h1>
+        <p>
+          <img class='centered' style='height: 500px' src='img/android-fragmentation.jpeg'>
+        </p>
+        <div class='source'></div>
       </article>
 
-      <article class='smaller'>
-        <h3>
-          Slide with bullet points (small font)
-        </h3>
+      <article>
+        <h1 style='margin-top:0px'>
+          Hardware fragmentation
+        </h1>
+        <p>
+          <img class='centered' style='height: 500px' src='img/android_model_beta1.gif'>
+        </p>
+        <div class='source'>Tweetdeck, 2010</div>
+      </article>
+
+      <article>
+        <h1 style='margin-top:0px'>
+          Hardware profusion
+        </h1>
+        <p align=center >
+          <br>
+          <img class='centered' style='display:inline; height: 200px' src='img/android-phones.jpeg'>
+          <img class='centered' style='display:inline; height: 200px' src='img/android-tablets.jpeg'>
+          <img class='centered' style='display:inline; height: 200px' src='img/android-tv.jpeg'>
+          <br>
+          <img class='centered' style='display:inline; height: 140px' src='img/android-jcdecaux.jpeg'>
+          <img class='centered' style='display:inline; height: 120px' src='img/android-watch.jpeg'>
+          <img class='centered' style='display:inline; height: 120px' src='img/android-reveil.jpeg'>
+          <br>
+          
+          <img class='centered' style='display:inline; height: 140px' src='img/android-radio.jpeg'>
+          <img class='centered' style='display:inline; height: 140px' src='img/android-settopbox.jpeg'>
+          <img class='centered' style='display:inline; height: 140px' src='img/android-homewares.jpeg'>
+        </p>
+
+        <div class='source'></div>
+      </article>
+
+      <article>
+        <h1 style='margin-top:0px'>
+          Software fragmentation
+        </h1>
+        <p>
+          <img class='centered' style='height: 250px' src='img/android-os-distribution.png'>
+          <br>
+          <img class='centered' style='height: 250px' src='img/android-os-fragmentation.jpeg'>
+        </p>
+        <div class='source'>Google</div>
+      </article>
+
+      <article>
+        <h1 style='margin-top:0px'>
+          Fragmentation<br>means slow updates
+        </h1>
+        <p>
+          <br><br>
+          <img class='centered' style='height: 300px' src='img/android-adoption.png'>
+        </p>
+        <div class='source'>Google, April 2012, 6 months OS evolution</div>
+      </article>
+
+      <article>
+        <h1>
+          WebKit to the rescue !
+        </h1>
+      </article>
+
+      <article>
+        <h1>
+          Android good news
+        </h1>
         <ul>
-          <li>
-            Use this template to create your presentation
-          <li>
-            Use the provided color palette, box and arrow graphics, and
-            chart styles
-          <li>
-            Instructions are provided to assist you in using this
-            presentation template effectively
-          <li>
-            At all times strive to maintain Google's corporate look and feel
+          <li>New x86 emulator with GPU HW accel</li>
+          <li>ICS now have the real google chrome (beta)</li>
+          <li>Huge team, moving fast !</li>
+          <li>Easy developement setup</li>
         </ul>
       </article>
 
       <article>
-        <h3>
-          Slide with a table
-        </h3>
-        
-        <table>
-          <tr>
-            <th>
-              Name
-            <th>
-              Occupation
-          <tr>
-            <td>
-              Luke Mahé
-            <td>
-              V.P. of Keepin’ It Real
-          <tr>
-            <td>
-              Marcin Wichary
-            <td>
-              The Michael Bay of Doodles
-        </table>
-      </article>
-      
-      <article class='smaller'>
-        <h3>
-          Slide with a table (smaller text)
-        </h3>
-        
-        <table>
-          <tr>
-            <th>
-              Name
-            <th>
-              Occupation
-          <tr>
-            <td>
-              Luke Mahé
-            <td>
-              V.P. of Keepin’ It Real
-          <tr>
-            <td>
-              Marcin Wichary
-            <td>
-              The Michael Bay of Doodles
-        </table>
-      </article>
-      
-      <article>
-        <h3>
-          Styles
-        </h3>
-        <ul>
-          <li>
-            <span class='red'>class="red"</span>
-          <li>
-            <span class='blue'>class="blue"</span>
-          <li>
-            <span class='green'>class="green"</span>
-          <li>
-            <span class='yellow'>class="yellow"</span>
-          <li>
-            <span class='black'>class="black"</span>
-          <li>
-            <span class='white'>class="white"</span>
-          <li>
-            <b>bold</b> and <i>italic</i>
-        </ul>
-      </article>
-      
-      <article>
-        <h2>
-          Segue slide
+        <h2 class='normal'>
+          Express Phonegap Android app
         </h2>
-      </article>
-
-      <article>
-        <h3>
-          Slide with an image
-        </h3>
-        <p>
-          <img style='height: 500px' src='images/example-graph.png'>
-        </p>
-        <div class='source'>
-          Source: Sergey Brin
-        </div>
-      </article>
-
-      <article>
-        <h3>
-          Slide with an image (centered)
-        </h3>
-        <p>
-          <img class='centered' style='height: 500px' src='images/example-graph.png'>
-        </p>
-        <div class='source'>
-          Source: Larry Page
-        </div>
-      </article>
-
-      <article class='fill'>
-        <h3>
-          Image filling the slide (with optional header)
-        </h3>
-        <p>
-          <img src='images/example-cat.jpg'>
-        </p>
-        <div class='source white'>
-          Source: Eric Schmidt
-        </div>
-      </article>
-
-      <article>
-        <h3>
-          This slide has some code
-        </h3>
-        <section>
-        <pre>
-&lt;script type='text/javascript'&gt;
-  // Say hello world until the user starts questioning
-  // the meaningfulness of their existence.
-  function helloWorld(world) {
-    for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }
-  }
-&lt;/script&gt;
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-  u { color: 'umber' }
-&lt;/style&gt;
-</pre>
-        </section>
-      </article>
-      
-      <article class='smaller'>
-        <h3>
-          This slide has some code (small font)
-        </h3>
-        <section>
-        <pre>
-&lt;script type='text/javascript'&gt;
-  // Say hello world until the user starts questioning
-  // the meaningfulness of their existence.
-  function helloWorld(world) {
-    for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }
-  }
-&lt;/script&gt;
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-  u { color: 'umber' }
-&lt;/style&gt;
-</pre>
-        </section>
-      </article>
-      
-      <article>
-        <q>
-          The best way to predict the future is to invent it.
-        </q>
-        <div class='author'>
-          Alan Kay
-        </div>
-      </article>
-      
-      <article class='smaller'>
-        <q>
-          A distributed system is one in which the failure of a computer 
-          you didn’t even know existed can render your own computer unusable.
-        </q>
-        <div class='author'>
-          Leslie Lamport
-        </div>
-      </article>
-      
-      <article class='nobackground'>
-        <h3>
-          A slide with an embed + title
-        </h3>
-        
-        <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
-      </article>
-
-      <article class='nobackground'>
-        <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
-      </article>
-
-      <article class='fill'>
-        <h3>
-          Full-slide embed with (optional) slide title on top
-        </h3>
-        <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
-      </article>
-      
-      <article>
-        <h3>
-          Thank you!
-        </h3>
-        
-        <ul>
-          <li>
-            <a href='http://www.google.com'>google.com</a>
+        <br><br>
+         <ul class=numbered >
+          <li> download cordova</li>
+          <li> run "<span class="red">android update project -p .</span>"</li>
+          <li> edit example/assets/www/index.html</li>
+          <li> run "<span class="red">ant debug install</span>"</li>
+          <li> enjoy on virtual or physical devices</li>
         </ul>
       </article>
+
+      <article>
+        <h2 class='normal'>
+          Android webview startup
+        </h2>
+        <br>
+        <pre>
+  package org.apache.cordova.example;
+
+  import android.app.Activity;
+  import android.os.Bundle;
+  import org.apache.cordova.*;
+
+  public class cordovaExample extends DroidGap
+  {
+      @Override
+      public void onCreate(Bundle savedInstanceState)
+      {
+          super.onCreate(savedInstanceState);
+          super.loadUrl("file:///android_asset/www/index.html");
+      }
+  }
+        </pre>
+      </article>
+
+      <article>
+        <h2 class='normal' align=center >
+          Express Sencha Touch app
+        </h2>
+        <br>
+        <p align=center >
+          <img src='img/sencha-example1.png' style='height:500px'/>
+          <img src='img/sencha-example2.png' style='height:500px'/>
+        </p>
+      </article>
+
+      <article>
+        <h2 class='normal' align=center >
+          Slides and code available on github
+        </h2>
+        <br>
+        <p align=center >
+          <img src='img/github.png' style='height:300px'/>
+          <br><br>
+          <a href='http://github.com/revolunet/phonegap-sencha-demo' target='_blank'>http://github.com/revolunet/phonegap-sencha-demo</a>
+          <br><br>
+          Android AND iOS compatible
+        </p>
+      </article>
+
+      <article>
+        <h2 class='normal' align=center >
+          Update assets/www/index.html
+        </h2><br>
+       <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;meta charset='utf-8'&gt;
+        &lt;title&gt;Phonegap+Sencha demo&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot;&gt;
+        &lt;script src=&quot;sencha-touch.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;cordova-android-1.6.0.js&quot;&gt;&lt;/script&gt;
+
+        &lt;script type=&quot;text/javascript&quot; src=&quot;app.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+      </article>
+
+      <article>
+        <h2 class='normal' align=center >
+          Sencha app.js startup
+        </h2>
+       <pre>
+Ext.application({
+    name: 'PhonegapDemo',
+    views: ['Main'],
+    models: ['Contact'],
+    stores: ['Contacts'],
+    controllers: ['Main'],
+
+    launch: function() {
+        // first view displayed
+        var mainPanel = Ext.Viewport.add({
+            xclass: 'PhonegapDemo.view.Main'
+        });
+        // load phonegap stuff
+        document.addEventListener("deviceready", function () {
+            mainPanel.fireEvent("deviceready");
+        } , true);
+    }
+});</pre>
+      </article>
+
+      <article>
+        <h2 class='normal' align=center >
+          MVC architecture
+        </h2>
+        <br>
+        <p align=center >
+          
+          Views are independant and decoupled.
+          <br>
+          Interactions are defined in the controller.
+          <br><br>
+          <img src='img/MVC-architecture.png'/>
+          
+        </p>
+      </article>
+
+
+      <article>
+        <h2 class='normal' align=center >
+          Controller example (1/2)
+        </h2>
+        <pre>
+Ext.define('PhonegapDemo.controller.Main', {
+    extend: 'Ext.app.Controller',
+    config: {
+        refs: { // defines 'shortcuts' to views elements
+            mainPanel: 'mainpanel',
+            listButton: 'mainpanel button[title=Contacts]'
+            [...]
+        },
+        control: { // listen to 'refs' events
+            mainPanel: {
+                deviceready: 'onDeviceReady'
+            },
+            listButton: {
+                tap: 'onListButtonTap'
+            },
+            [...]
+        }
+    }, </pre>
+      </article>
+
+      <article>
+        <h2 class='normal' align=center >
+          Controller example (2/2)
+        </h2>
+        <pre>
+    // some of the controller methods
+    onDeviceReady: function() {
+        // get phonegap contacts when ready
+        // save scope for phonegap callback
+        var me = this;
+        navigator.contacts.find(['*'], function(contacts) {
+            var store = Ext.getStore('Contacts');
+            store.add(contacts);
+            me.updateHomeInfo(store.getCount());
+        }, function() {
+            navigator.notification.alert("cannot access phone contacts :/");
+        });
+    },
+    onListButtonTap: function() {
+        var button = this.getListButton();
+        button.setBadgeText(false);
+    },
+    [...]</pre>
+    </article>
+ 
+
+      <article>
+        <h1 style='font-size:120px' align=center >Demo time !</h1>
+      </article>
+ 
+
+      <article>
+        <h1 style='font-size:100px;margin-top:50px' align=center >Questions ?</h1>
+        <p align=center ><br><br>
+          <img src='img/beer.jpeg'/>
+        </p>
+      </article>
+
+      <article>
+        <h1 style='font-size:100px;margin-top:100px' align=center >Thank you</h1>
+        <p align=center >
+          <br><br>
+          twitter: <a href='http://twitter.com/revolunet' target='_blank'>@revolunet</a>
+          <br><br>
+          github: <a href='http://github.com/revolunet' target='_blank'>revolunet</a>
+          <br><br><br><br>
+          Thanks to Phonegap Paris meetup & IESA for hosting
+        </p>
+      </article>
+ 
 
     </section>
 
