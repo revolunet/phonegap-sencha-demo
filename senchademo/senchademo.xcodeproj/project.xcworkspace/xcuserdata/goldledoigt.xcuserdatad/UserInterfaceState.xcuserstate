@@ -1031,7 +1031,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 10:55 PM</string>
+		<string>Yesterday at 10:55 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -1167,7 +1167,7 @@
 		<string>IDEActiveWorkspaceTabController</string>
 		<string>IDEWindowToolbarIsVisible</string>
 		<string>IDEWindowTabBarIsVisible</string>
-		<string>{{-278, 1070}, {1400, 778}}</string>
+		<string>{{-317, 1086}, {1400, 778}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
