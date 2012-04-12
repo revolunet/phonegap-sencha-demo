@@ -12,6 +12,7 @@ Ext.define('PhonegapDemo.view.Carousel', {
         defaults: {
             tpl: [
                 '<div style="text-align:center"><br>',
+                '<p style="font-weight:bold">{displayName}</p>',
                 '<p>Contact #{id}</p><br>',
                 '<img style="border:1px solid silver" src="{photo}" width=200 height=200/>',
                 '<br><br><p><a href="tel:+{phoneNumber}">{phoneNumber}</a></p><br>',

@@ -28,23 +28,26 @@ Ext.define('PhonegapDemo.controller.Main', {
     },
 
     launch: function() {
-        var store = Ext.getStore('Contacts'),
-            count = store.getCount();
-        this.updateHomeInfo(count);
+        // this is auto launched
+        if (Ext.os.deviceType == 'Desktop') {
+            var store = Ext.getStore('Contacts'),
+                count = store.getCount();
+            this.updateHomeInfo(count);
+        }
     },
 
     onDeviceReady: function() {
         // get phonegap contacts when ready
         // save scope for phonegap callback
         var me = this;
-        var fields = ['id', 'displayName', 'photos', 'phoneNumbers', 'emails'];
+        var fields = ['*'];
         navigator.contacts.find(fields, function(contacts) {
             var validContacts = [],
                 store = Ext.getStore('Contacts');
 
             for (var i = 0, l = contacts.length; i < l; i++) {
                 // filter results
-                if (contacts[i].photos.length > 0 && contacts[i].photos[0].value !== '' && contacts[i].displayName && contacts[i].phoneNumbers.length > 0) {
+                if (contacts[i].photos && contacts[i].photos.length > 0 && contacts[i].photos[0].value !== '' && contacts[i].displayName && contacts[i].phoneNumbers && contacts[i].phoneNumbers.length > 0 && contacts[i].emails && contacts[i].emails.length > 0) {
                     validContacts.push(contacts[i]);
                 }
             }
