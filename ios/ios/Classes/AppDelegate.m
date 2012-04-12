@@ -19,9 +19,9 @@
 
 //
 //  AppDelegate.m
-//  senchademo
+//  ios
 //
-//  Created by gary on 4/11/12.
+//  Created by gary on 4/12/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
@@ -39,7 +39,7 @@
 
 @implementation AppDelegate
 
-@synthesize invokeString, window, viewController;
+@synthesize window, viewController;
 
 - (id) init
 {	
@@ -48,8 +48,8 @@
 	 **/
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage]; 
     [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
-    
-    [CDVURLProtocol registerPGHttpURLProtocol];
+        
+    [CDVURLProtocol registerURLProtocol];
     
     return [super init];
 }
@@ -62,9 +62,11 @@
 - (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {    
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
+    NSString* invokeString = nil;
+    
     if (url && [url isKindOfClass:[NSURL class]]) {
-        self.invokeString = [url absoluteString];
-		NSLog(@"senchademo launchOptions = %@", url);
+        invokeString = [url absoluteString];
+		NSLog(@"ios launchOptions = %@", url);
     }    
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -77,12 +79,9 @@
     self.viewController.useSplashScreen = YES;
     self.viewController.wwwFolderName = @"www";
     self.viewController.startPage = @"index.html";
+    self.viewController.invokeString = invokeString;
     self.viewController.view.frame = viewBounds;
     
-    // over-ride delegates
-    self.viewController.webView.delegate = self;
-    self.viewController.commandDelegate = self;
-
     // check whether the current orientation is supported: if it is, keep it, rather than forcing a rotation
     BOOL forceStartupRotation = YES;
     UIDeviceOrientation curDevOrientation = [[UIDevice currentDevice] orientation];
@@ -116,7 +115,7 @@
 }
 
 // this happens while we are running ( in the background, or from within our own app )
-// only valid if FooBar.plist specifies a protocol to handle
+// only valid if ios-Info.plist specifies a protocol to handle
 - (BOOL) application:(UIApplication*)application handleOpenURL:(NSURL*)url 
 {
     if (!url) { 
@@ -131,56 +130,6 @@
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
     
     return YES;    
-}
-
-#pragma PGCommandDelegate implementation
-
-- (id) getCommandInstance:(NSString*)className
-{
-	return [self.viewController getCommandInstance:className];
-}
-
-- (BOOL) execute:(CDVInvokedUrlCommand*)command
-{
-	return [self.viewController execute:command];
-}
-
-- (NSString*) pathForResource:(NSString*)resourcepath;
-{
-	return [self.viewController pathForResource:resourcepath];
-}
-
-#pragma UIWebDelegate implementation
-
-- (void) webViewDidFinishLoad:(UIWebView*) theWebView 
-{
-	// only valid if FooBar.plist specifies a protocol to handle
-	if (self.invokeString)
-	{
-		// this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
-		NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
-		[theWebView stringByEvaluatingJavaScriptFromString:jsString];
-	}
-	
-	 // Black base color for background matches the native apps
-   	theWebView.backgroundColor = [UIColor blackColor];
-    
-	return [self.viewController webViewDidFinishLoad:theWebView];
-}
-
-- (void) webViewDidStartLoad:(UIWebView*)theWebView 
-{
-	return [self.viewController webViewDidStartLoad:theWebView];
-}
-
-- (void) webView:(UIWebView*)theWebView didFailLoadWithError:(NSError*)error 
-{
-	return [self.viewController webView:theWebView didFailLoadWithError:error];
-}
-
-- (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
-{
-	return [self.viewController webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType];
 }
 
 - (void) dealloc

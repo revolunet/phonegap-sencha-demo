@@ -16,20 +16,21 @@
  specific language governing permissions and limitations
  under the License.
  */
+
 //
-//  main.m
-//  senchademo
+//  MainViewController.h
+//  ios
 //
-//  Created by gary on 4/11/12.
+//  Created by gary on 4/12/12.
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifdef CORDOVA_FRAMEWORK
+    #import <Cordova/CDVViewController.h>
+#else
+    #import "CDVViewController.h"
+#endif
 
-int main(int argc, char *argv[]) {
-    
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
-    [pool release];
-    return retVal;
-}
+@interface MainViewController : CDVViewController
+
+@end

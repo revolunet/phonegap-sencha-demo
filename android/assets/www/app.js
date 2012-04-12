@@ -19,6 +19,7 @@ Ext.application({
 
         // load phonegap stuff
         document.addEventListener("deviceready", function () {
+            alert("deviceready");
             mainPanel.fireEvent("deviceready");
         } , true);
     }

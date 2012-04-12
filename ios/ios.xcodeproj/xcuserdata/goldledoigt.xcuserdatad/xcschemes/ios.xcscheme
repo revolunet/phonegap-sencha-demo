@@ -13,10 +13,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E60CBBFD1536210900F8FABB"
-               BuildableName = "senchademo.app"
-               BlueprintName = "senchademo"
-               ReferencedContainer = "container:senchademo.xcodeproj">
+               BlueprintIdentifier = "E63F76B61536E92600814016"
+               BuildableName = "ios.app"
+               BlueprintName = "ios"
+               ReferencedContainer = "container:ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -38,10 +38,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E60CBBFD1536210900F8FABB"
-            BuildableName = "senchademo.app"
-            BlueprintName = "senchademo"
-            ReferencedContainer = "container:senchademo.xcodeproj">
+            BlueprintIdentifier = "E63F76B61536E92600814016"
+            BuildableName = "ios.app"
+            BlueprintName = "ios"
+            ReferencedContainer = "container:ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E60CBBFD1536210900F8FABB"
-            BuildableName = "senchademo.app"
-            BlueprintName = "senchademo"
-            ReferencedContainer = "container:senchademo.xcodeproj">
+            BlueprintIdentifier = "E63F76B61536E92600814016"
+            BuildableName = "ios.app"
+            BlueprintName = "ios"
+            ReferencedContainer = "container:ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
